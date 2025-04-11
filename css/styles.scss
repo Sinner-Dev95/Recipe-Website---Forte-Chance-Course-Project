@@ -109,3 +109,29 @@ a {
 }
 
 // -----------------------FINE RESET--------------------------
+
+
+
+//STYLE ARTICLE
+.ricetta {
+    padding: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+        .categorie a {
+            text-decoration: underline;
+            color:$callToAction;
+        }
+        .ricetta-text {
+            width: 50%;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+           
+        }
+}

@@ -101,4 +101,26 @@ a {
 :focus-visible {
   outline: 2px solid #4d90fe;
   outline-offset: 2px;
+}
+
+.ricetta {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.ricetta .categorie a {
+  text-decoration: underline;
+  color: #E07A5F;
+}
+.ricetta .ricetta-text {
+  width: 50%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }/*# sourceMappingURL=styles.css.map */
