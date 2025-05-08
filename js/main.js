@@ -1,23 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const headerMenu = document.querySelector('.header-menu');
-    const menuItems = document.querySelectorAll('.menu-item');
-    
-    // Aggiungiamo l'attributo --item-index per i ritardi nelle animazioni
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const headerMenu = document.querySelector('.header-menu');
+  const menuItems = document.querySelectorAll('.menu-item');
+  const header = document.querySelector('.header');
+
+  hamburgerIcon.addEventListener('touchstart', function() {
+    headerMenu.classList.toggle('open');
+    header.classList.toggle('open');
     menuItems.forEach((item, index) => {
-      item.style.setProperty('--item-index', index);
-    });
-    
-    hamburgerIcon.addEventListener('click', function() {
-      // Toggle della classe open per hamburger
-      this.classList.toggle('open');
-      
-      // Toggle della classe open per il menu
-      headerMenu.classList.toggle('open');
-      
-      // Toggle della classe open per ogni voce del menu
-      menuItems.forEach(item => {
+      setTimeout(() => {
         item.classList.toggle('open');
-      });
+      }, index * 50);
     });
   });
+});
