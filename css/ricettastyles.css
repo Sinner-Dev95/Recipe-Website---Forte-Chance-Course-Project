@@ -1,12 +1,10 @@
 /* modern-reset.css v1.0 */
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin and padding */
 html,
 body,
 h1,
@@ -26,27 +24,30 @@ ol {
   padding: 0;
 }
 
-/* Set core root defaults */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Remove list styles */
 ul,
 ol {
   list-style: none;
 }
 
-/* Make images easier to work with */
 img,
 picture,
 video,
@@ -56,7 +57,6 @@ svg {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -64,7 +64,6 @@ select {
   font: inherit;
 }
 
-/* Remove default button styles */
 button {
   border: none;
   background: none;
@@ -72,11 +71,7 @@ button {
   cursor: pointer;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {
@@ -86,70 +81,124 @@ button {
     scroll-behavior: auto !important;
   }
 }
-/* Set default anchor styles */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Remove focus outline for non-keyboard focus */
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Focus styles for keyboard navigation */
 :focus-visible {
   outline: 2px solid #4d90fe;
   outline-offset: 2px;
 }
 
+article {
+  margin: 0 auto;
+  width: 80%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 .ricetta {
-  padding: 15px;
+  width: min 70%, 90%;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .ricetta .categorie a {
   text-decoration: underline;
   color: #E07A5F;
 }
 .ricetta .ricetta-text {
-  width: 70%;
+  width: 100%;
+  max-width: 650px;
   text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid rgba(224, 122, 95, 0.3);
+}
+.ricetta .ricetta-text h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .img-ricetta {
   width: 100%;
-  max-width: 400px;
-  max-height: 300px;
-  overflow: hidden;
-  border-top: 3px solid rgba(224, 122, 95, 0.3);
-  padding-top: 3rem;
-  margin-top: 3rem;
+  max-width: 500px;
+  margin: 1.5rem auto;
 }
-
+.img-ricetta a {
+  display: block;
+}
 .img-ricetta a img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 8px;
 }
 
 .preparazione-ricetta {
+  width: 100%;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  margin: 1.5rem auto;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 3px solid rgba(224, 122, 95, 0.3);
 }
 .preparazione-ricetta .preparazione-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}/*# sourceMappingURL=styles.css.map */
+  gap: 0.5rem;
+}
+
+.ingredienti-ricetta {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ingredienti-ricetta .ingredienti-list {
+  padding-left: 1rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.procedimento-ricetta {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.procedimento-ricetta .procedimento-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}/*# sourceMappingURL=ricettastyles.css.map */

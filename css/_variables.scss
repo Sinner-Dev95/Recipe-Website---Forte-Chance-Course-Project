@@ -1,0 +1,27 @@
+// --------------------- COLORI ---------------------
+$background: #F9F7F3;
+$backgorundCard: #FFFFFF;
+$text: #3E5622;
+$headerAndDetails: #86B049;
+$callToAction: #E07A5F;
+
+// --------------------- SPAZIATURE BASE ---------------------
+$space-sm: 0.5rem;   // 8px
+$space-md: 1rem;     // 16px
+$space-lg: 1.5rem;   // 24px
+
+// --------------------- PADDING ---------------------
+$pad-sm: $space-sm;   // 8px  (riutilizza $space-sm)
+$pad-md: $space-md;   // 16px (riutilizza $space-md)
+$pad-lg: $space-lg;   // 24px (riutilizza $space-lg)
+
+// --------------------- DIMENSIONI ---------------------
+$width-lg: 80%;
+$width-md: 70%;
+
+// --------------------- BORDER RADIUS ---------------------
+$radius-sm: 4px;
+$radius-md: 8px;
+
+// --------------------- OMBRE ---------------------
+$shadow-base: 0 2px 4px rgba(0,0,0,0.1);
