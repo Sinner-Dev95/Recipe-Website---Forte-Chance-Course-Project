@@ -147,8 +147,8 @@ body {
       touch-action: none;
       
       .hamburger-line {
-        width: 25px;
-        height: 3px;
+        width: 30px;
+        height: 4px;
         background-color: $callToAction;
         border-radius: 2px;
         transition: all 0.3s ease; // Transizione fluida per tutte le proprietà
@@ -205,6 +205,7 @@ body {
           padding: $pad-sm $pad-lg;
           border-radius: 3px;
           font-weight: 600;
+          font-size: 1.2rem;
           margin-bottom: $space-sm;
           opacity: 0;
           transform: translateY(10px);
@@ -263,7 +264,7 @@ body {
         pointer-events: auto;
         transform: none;
         background-color: transparent;
-        box-shadow: none;
+        box-shadow: none; 
         padding: 0;
 
         .menu-list {

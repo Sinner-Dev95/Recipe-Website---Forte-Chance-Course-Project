@@ -136,8 +136,8 @@ body {
   touch-action: none;
 }
 .header-container header .hamburger-icon .hamburger-line {
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   background-color: #E07A5F;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -185,6 +185,7 @@ body {
   padding: 0.5rem 1.5rem;
   border-radius: 3px;
   font-weight: 600;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   opacity: 0;
   transform: translateY(10px);
