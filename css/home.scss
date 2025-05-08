@@ -110,46 +110,45 @@ body {
 
 
 //STILE HEADER MOBILE FIRST
-.header {
-  
+//STILE HEADER MOBILE FIRST
+.header-container {
+  position: relative;
   border: 2px solid red;
-  display: flex;
-  
-  justify-content: space-between;
-  align-items: center;
   padding: $pad-md;
-    .header-logo {
-      img {
-        width: 100px;
-        height: 100px;
-      }
-    }
 
-    h2 {
-      font-size: 2rem;
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .hbg-icon {
+    .hamburger-icon {
       
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      .hbg-line {
-        background-color: black;
-        width: 30px;
+      gap: 5px;
+      padding: 5px;
+      cursor: pointer;
+
+      .hamburger-line {
+        width: 25px;
         height: 3px;
-      }
-
-      }
-    }
-
-    .header-nav {
-      .header-list {
-        display: flex;
-        flex-direction: column;
+        background-color: black;
+        border-radius: 2px;
       }
     }
 
-
-
-
+    .header-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+       display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: $pad-md;
+        .menu-list {
+          text-align: center;
+        }
+    }
+  }
+}

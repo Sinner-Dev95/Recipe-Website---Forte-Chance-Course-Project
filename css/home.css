@@ -99,32 +99,39 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.header {
+.header-container {
+  position: relative;
   border: 2px solid red;
+  padding: 1rem;
+}
+.header-container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header-container header .hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.header-container header .hamburger-icon .hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+.header-container header .header-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 }
-.header .header-logo img {
-  width: 100px;
-  height: 100px;
-}
-.header h2 {
-  font-size: 2rem;
-}
-.header .hbg-icon {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.header .hbg-icon .hbg-line {
-  background-color: black;
-  width: 30px;
-  height: 3px;
-}
-
-.header-nav .header-list {
-  display: flex;
-  flex-direction: column;
+.header-container header .header-menu .menu-list {
+  text-align: center;
 }/*# sourceMappingURL=home.css.map */
