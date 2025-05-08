@@ -111,6 +111,7 @@ body {
 
 //STILE HEADER MOBILE FIRST
 //STILE HEADER MOBILE FIRST
+// Animazioni hamburger menu
 .header-container {
   position: relative;
   border: 2px solid red;
@@ -122,18 +123,34 @@ body {
     align-items: center;
 
     .hamburger-icon {
-      
       display: flex;
       flex-direction: column;
       gap: 5px;
       padding: 5px;
       cursor: pointer;
+      z-index: 100; // Assicura che resti sopra il menu
 
       .hamburger-line {
         width: 25px;
         height: 3px;
         background-color: black;
         border-radius: 2px;
+        transition: all 0.3s ease; // Transizione fluida per tutte le proprietà
+      }
+      
+      // Stile quando il menu è aperto (X)
+      &.open {
+        .hamburger-line:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        
+        .hamburger-line:nth-child(2) {
+          opacity: 0;
+        }
+        
+        .hamburger-line:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
       }
     }
 
@@ -142,13 +159,42 @@ body {
       top: 100%;
       right: 0;
       width: 100%;
-       display: flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
+      opacity: 0;
       padding: $pad-md;
-        .menu-list {
-          text-align: center;
+      background-color: white;
+      transform: translateY(-20px);
+      pointer-events: none; // Disattiva interazioni quando nascosto
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); // Transizione stile Apple
+      
+      // Stile quando il menu è aperto
+      &.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto; // Riattiva interazioni
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      .menu-list {
+        text-align: center;
+        width: 100%;
+        
+        .menu-item {
+          font-weight: 600;
+          margin-bottom: $space-sm;
+          opacity: 0;
+          transform: translateY(10px);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          transition-delay: calc(0.05s * var(--item-index)); // Ritardo progressivo
+          
+          &.open {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
+      }
     }
   }
 }
