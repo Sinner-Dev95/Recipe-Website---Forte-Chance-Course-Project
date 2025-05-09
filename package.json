@@ -1,0 +1,22 @@
+{
+  "name": "ricette-fc",
+  "version": "1.0.0",
+  "description": "This repository contains a recipe website built as part of the \"Forte Chance\" course. The site allows users to browse, search, and explore various recipes with a user-friendly interface. It showcases skills in web development using HTML, CSS, and JavaScript, offering an example of a functional recipe platform.",
+  "main": "index.js",
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "sass": "sass --watch css:css"
+}  ,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinner-Dev95/Recipe-Website---Forte-Chance-Course-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sinner-Dev95/Recipe-Website---Forte-Chance-Course-Project/issues"
+  },
+  "homepage": "https://github.com/Sinner-Dev95/Recipe-Website---Forte-Chance-Course-Project#readme",
+  "devDependencies": {
+    "sass": "^1.87.0"
