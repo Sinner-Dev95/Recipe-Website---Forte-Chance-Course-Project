@@ -124,7 +124,7 @@ body {
   width: 100%;
 }
 .header-container header .logo h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .header-container header .hamburger-icon {
   display: flex;
@@ -219,6 +219,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .header-title {
+    font-size: medium;
+  }
   .header-container header .header-menu .menu-list .menu-item {
     font-size: 1rem;
     white-space: nowrap;
