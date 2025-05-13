@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "variables";
 
 // ----------------------- RESET --------------------------
@@ -103,20 +103,29 @@ a {
 // STILE BODY
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 //STILE HEADER MOBILE FIRST
 //STILE HEADER MOBILE FIRST
 // Animazioni hamburger menu
 .header-container {
-  
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  
+
   background-color: $background;
   z-index: 1000;
   header {
@@ -146,7 +155,7 @@ body {
       cursor: pointer;
       z-index: 100; // Assicura che resti sopra il menu
       touch-action: none;
-      
+
       .hamburger-line {
         width: 30px;
         height: 4px;
@@ -198,7 +207,7 @@ body {
 
       .menu-list {
         display: flex;
-  flex-direction: column; // <--- Assicurati che ci sia questo
+        flex-direction: column; // <--- Assicurati che ci sia questo
         text-align: center;
         width: 100%;
 
@@ -211,9 +220,7 @@ body {
           opacity: 0;
           transform: translateY(10px);
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-          transition-delay: calc(
-            0.05s * var(--item-index)
-          ); // Ritardo progressivo
+          transition-delay: calc(0.05s * var(--item-index)); // Ritardo progressivo
           position: relative;
           display: inline-block;
 
@@ -237,7 +244,6 @@ body {
           &:active::after {
             transform: scaleX(1);
           }
-        
         }
 
         .menu-item:hover {
@@ -249,80 +255,99 @@ body {
   }
 }
 
-
 //MAIN-CONTAINER
 
 .page-wrapper {
   padding-top: 6rem;
 
-    .hero-section {
-      padding-top: 1rem;
-      text-align: center;
+  .hero-section {
+    background-image: url("/assets/img/joanie-simon-2r8BzVYZIeo-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100vh;
+    min-height: 450px;
+
+    .hero-text {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      gap: 2rem;
-      min-height: 100vh;
-
-        .hero-title {
-           font-family: "Coral Pixels", sans-serif;
-        }
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #f7f7f7;
+      padding: 20px;
+      opacity: 0.8;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
-}
 
+    .hero-title {
+      color: $callToAction;
+      margin-top: 2rem;
+      font-size: 3rem;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }}
 
-// RESPONSIVE TABLET
-@media (min-width: 768px) and (max-width: 1023px) {
+  // RESPONSIVE TABLET
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .header-title {
+      font-size: medium;
+    }
+    .header-container header .header-menu .menu-list .menu-item {
+      font-size: 1rem;
 
-  .header-title {
-    font-size: medium;
+      white-space: nowrap; // Impedisce il wrap del testo
+    }
   }
-  .header-container header .header-menu .menu-list .menu-item {
-    font-size: 1rem;
-   
-    white-space: nowrap; // Impedisce il wrap del testo
-  }
-}
 
+  //RESPONSIVE DESKTOP
+  @media (min-width: 768px) {
+    .header-container {
+      header {
+        .hamburger-icon {
+          display: none;
+        }
 
-//RESPONSIVE DESKTOP
-@media (min-width: 768px) {
-  .header-container {
-    header {
-      .hamburger-icon {
-        display: none;
-      }
-
-      .header-menu {
-        display: flex;
-        position: static;
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-        background-color: transparent;
-        box-shadow: none; 
-        padding: 0;
-
-        .menu-list {
+        .header-menu {
           display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: $space-lg; // o quello che usi per la spaziatura
-          width: auto;
-          justify-content: flex-end;
-          width: 100%;
-          .menu-item {
-            
-            font-size: 1rem;
-            opacity: 1;
-            transform: none;
-            transition: none;
-            margin-bottom: 0;
-            cursor: pointer;
+          position: static;
+          opacity: 1;
+          pointer-events: auto;
+          transform: none;
+          background-color: transparent;
+          box-shadow: none;
+          padding: 0;
+
+          .menu-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $space-lg; // o quello che usi per la spaziatura
+            width: auto;
+            justify-content: flex-end;
+            width: 100%;
+            .menu-item {
+              font-size: 1rem;
+              opacity: 1;
+              transform: none;
+              transition: none;
+              margin-bottom: 0;
+              cursor: pointer;
+            }
           }
         }
       }
     }
   }
-}
