@@ -116,7 +116,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .header-container header .logo {
   display: flex;
@@ -286,6 +286,9 @@ body {
   .header-container header .header-menu .menu-list .menu-item {
     font-size: 1rem;
     white-space: nowrap;
+  }
+  .page-wrapper .hero-section {
+    background-size: contain;
   }
   .page-wrapper .hero-section .hero-text {
     width: 70%;

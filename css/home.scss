@@ -135,7 +135,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 60px; // O l'altezza del tuo header
-    padding: $pad-md;
+    padding: $pad-sm;
     .logo {
       display: flex;
       align-items: center;
@@ -340,6 +340,7 @@ body {
 
     //MAIN-CONTAINER
     .page-wrapper .hero-section{
+      background-size: contain;
       .hero-text {
         width: 70%;
       }
