@@ -259,7 +259,7 @@ body {
 
 .page-wrapper {
   padding-top: 4rem;
-
+  //HERO-SECTION
   .hero-section {
     border-radius: 1rem;
     background-image: url("/assets/img/joanie-simon-2r8BzVYZIeo-unsplash.jpg");
@@ -283,8 +283,7 @@ body {
       justify-content: center;
       gap: 1rem;
       padding: 1rem 1rem;
-      background-color: #f7f7f7;
-      opacity: 0.9;
+      background-color: rgba(247, 247, 247, 0.9);
       border-radius: 5px;
       
       font-weight: 600;
@@ -302,7 +301,29 @@ body {
     .hero-para{
       font-size: 1.3rem;
     }
-  }}
+  }
+  //HERO-BUTTON
+  .hero-button{
+     border: 2px solid $callToAction;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $callToAction;
+    color: $background;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .hero-button:hover {
+    border: 2px solid $callToAction;
+    background-color: $background;
+    color: $callToAction;
+  }
+}
+
+
 
   // RESPONSIVE TABLET
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -314,7 +335,25 @@ body {
 
       white-space: nowrap; // Impedisce il wrap del testo
     }
+
+
+    //MAIN-CONTAINER
+    .page-wrapper .hero-section{
+      .hero-text {
+        width: 70%;
+      }
+      .hero-title{
+        font-size: 2.5rem;
+      }
+
+      .hero-button{
+        padding: 1rem 3rem;
+      }
+    }
   }
+
+
+
 
   //RESPONSIVE DESKTOP
   @media (min-width: 768px) {
@@ -363,6 +402,10 @@ body {
       }
       .hero-title{
         font-size: 3rem;
+      }
+
+      .hero-button{
+        padding: 1rem 4rem;
       }
     }
   }

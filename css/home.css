@@ -245,8 +245,7 @@ body {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 1rem;
-  background-color: #f7f7f7;
-  opacity: 0.9;
+  background-color: rgba(247, 247, 247, 0.9);
   border-radius: 5px;
   font-weight: 600;
 }
@@ -261,6 +260,23 @@ body {
 .page-wrapper .hero-section .hero-para {
   font-size: 1.3rem;
 }
+.page-wrapper .hero-button {
+  border: 2px solid #E07A5F;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #E07A5F;
+  color: #F9F7F3;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page-wrapper .hero-button:hover {
+  border: 2px solid #E07A5F;
+  background-color: #F9F7F3;
+  color: #E07A5F;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-title {
@@ -269,6 +285,15 @@ body {
   .header-container header .header-menu .menu-list .menu-item {
     font-size: 1rem;
     white-space: nowrap;
+  }
+  .page-wrapper .hero-section .hero-text {
+    width: 70%;
+  }
+  .page-wrapper .hero-section .hero-title {
+    font-size: 2.5rem;
+  }
+  .page-wrapper .hero-section .hero-button {
+    padding: 1rem 3rem;
   }
 }
 @media (min-width: 768px) {
@@ -311,5 +336,8 @@ body {
   }
   .page-wrapper .hero-section .hero-title {
     font-size: 3rem;
+  }
+  .page-wrapper .hero-section .hero-button {
+    padding: 1rem 4rem;
   }
 }/*# sourceMappingURL=home.css.map */
