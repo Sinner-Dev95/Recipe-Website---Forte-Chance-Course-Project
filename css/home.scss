@@ -125,7 +125,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-
+  
   background-color: $background;
   z-index: 1000;
   header {
@@ -258,14 +258,15 @@ body {
 //MAIN-CONTAINER
 
 .page-wrapper {
-  padding-top: 6rem;
+  padding-top: 4rem;
 
   .hero-section {
+    border-radius: 1rem;
     background-image: url("/assets/img/joanie-simon-2r8BzVYZIeo-unsplash.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -281,22 +282,25 @@ body {
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      padding: 1rem;
+      padding: 1rem 1rem;
       background-color: #f7f7f7;
-      padding: 20px;
-      opacity: 0.8;
+      opacity: 0.9;
       border-radius: 5px;
-      font-size: 1.5rem;
+      
       font-weight: 600;
     }
 
     .hero-title {
       color: $callToAction;
       margin-top: 2rem;
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-family: "Bebas Neue", sans-serif;
       font-weight: 400;
       font-style: normal;
+    }
+
+    .hero-para{
+      font-size: 1.3rem;
     }
   }}
 
@@ -348,6 +352,17 @@ body {
             }
           }
         }
+      }
+    }
+    //MAIN-CONTAINER
+    .page-wrapper .hero-section{
+      background-position: center;
+      background-size: cover;
+      .hero-text {
+        width: 70%;
+      }
+      .hero-title{
+        font-size: 3rem;
       }
     }
   }

@@ -220,14 +220,15 @@ body {
 }
 
 .page-wrapper {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 .page-wrapper .hero-section {
+  border-radius: 1rem;
   background-image: url("/assets/img/joanie-simon-2r8BzVYZIeo-unsplash.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -243,21 +244,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 1rem;
   background-color: #f7f7f7;
-  padding: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 5px;
-  font-size: 1.5rem;
   font-weight: 600;
 }
 .page-wrapper .hero-section .hero-title {
   color: #E07A5F;
   margin-top: 2rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.page-wrapper .hero-section .hero-para {
+  font-size: 1.3rem;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -299,5 +301,15 @@ body {
     transition: none;
     margin-bottom: 0;
     cursor: pointer;
+  }
+  .page-wrapper .hero-section {
+    background-position: center;
+    background-size: cover;
+  }
+  .page-wrapper .hero-section .hero-text {
+    width: 70%;
+  }
+  .page-wrapper .hero-section .hero-title {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=home.css.map */
